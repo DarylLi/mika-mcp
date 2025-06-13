@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token_here"
+      }
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-sqlite",
+        "--db-path",
+        "./data/demo.db"
+      ]
+    },
+    "12306": {
+      "command": "node",
+      "args": [
+        "./servers/12306-server.js"
+      ],
+      "env": {
+        "12306_API_KEY": "your_12306_api_key_here"
+      }
+    },
+    "web-search": {
+      "command": "node",
+      "args": [
+        "./servers/web-search-server.js"
+      ],
+      "env": {
+        "SEARCH_API_KEY": "your_search_api_key_here"
+      }
+    }
+  }
+} 
